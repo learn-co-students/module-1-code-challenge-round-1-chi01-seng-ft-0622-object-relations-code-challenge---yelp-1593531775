@@ -5,4 +5,10 @@ class Restaurant
     @name = name
   end
 
+  def name
+    name = self.all.select do |place|
+      name.restaurant == self
+    end
+  end
+
 end
